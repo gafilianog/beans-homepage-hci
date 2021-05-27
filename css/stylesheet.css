@@ -1,0 +1,299 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    user-select: none;
+    -moz-user-select: none;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+
+/* NAVBAR */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color .5s ease;
+    z-index: 100;
+}
+
+header .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 150px;
+}
+
+nav {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    transition: height .5s ease;
+}
+
+nav a {
+    color: white;
+    font-size: 1.05rem;
+    font-weight: bold;
+}
+
+nav img {
+    width: 50px;
+    margin-right: 5px;
+    float: left;
+}
+
+nav .brand {
+    font-size: 2rem;
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 20px;
+    margin-left: auto;
+}
+
+.nav-item {
+    margin: 0 20px;
+    position: relative;
+}
+
+.nav-item::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: relative;
+    left: 0;
+    bottom: -3px;
+    transform: scaleX(0);
+    transform-origin: middle;
+    transition: transform .5s ease;
+}
+
+.nav-item:hover::after {
+    transform: scaleX(1);
+}
+
+.signup {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color .5s ease;
+}
+
+.signup:hover {
+    background-color: gray;
+}
+
+
+/* STYLE AFTER SCROLL */
+
+.scrolling-active {
+    background: linear-gradient(to right, #00b09b, #96c93d);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+}
+
+.scrolling-active nav {
+    height: 60px;
+}
+
+.scrolling-active nav a {
+    color: #313131;
+}
+
+.scrolling-active .signup {
+    background-color: #313131;
+    color: white;
+}
+
+.scrolling-active .signup:hover {
+    background-color: black;
+}
+
+.scrolling-active .nav-item::after {
+    background-color: #313131;
+}
+
+
+/* PAGE TOP */
+
+#page-top {
+    height: 100vh;
+    width: 100%;
+    background-color: #B1D8B7;
+    position: relative;
+    cursor: pointer;
+    display: block;
+}
+
+#page-top .container {
+    display: flex;
+    padding: 100px 150px;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    margin: 205px auto 205px 100px;
+}
+
+.name h1 {
+    font-size: 7rem;
+    font-weight: 300;
+    color: white;
+    text-shadow: 2px 2px 8px black;
+}
+
+.name p {
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#page-top .container img {
+    width: 400px;
+    margin: auto 100px 205px auto;
+}
+
+
+/* DOWNLOAD */
+
+#download {
+    width: 100%;
+    background: linear-gradient(to right, #2675a3, #113bc5);
+    position: relative;
+    height: 100vh;
+    padding: 100px 150px;
+}
+
+#download .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#download .container .text h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#download .container img {
+    width: 400px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ABOUT */
+
+#about {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+    padding: 150px 150px;
+}
+
+#about .container {
+    display: flex;
+    height: 71vh;
+    border-width: 2px;
+    padding: 0 70px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px #888888;
+}
+
+#about .container h1 {
+    font-size: 7rem;
+    font-weight: 100;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#about .container p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    width: 500px;
+    text-align: center;
+    margin: auto 0 auto auto;
+}
+
+#about .container b {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.download-lil {
+    font-family: inherit;
+    font-size: inherit;
+    color: green;
+    font-weight: 700;
+}
+
+.download-lil:hover {
+    color: #2675a3;
+}
+
+
+/* SOCIALS */
+
+#socials {
+    width: 100%;
+    height: 50vh;
+    background-color: #bae8e8;
+    position: relative;
+    padding: 50.6px;
+}
+
+#socials .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#socials .container h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 140px;
+}
+
+.socials-list {
+    line-height: 140px;
+    display: flex;
+}
+
+.socials-list img {
+    width: 50px;
+    margin: 0 20px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #313131;
+    padding: 25px;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+}
